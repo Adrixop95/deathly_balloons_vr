@@ -72,7 +72,7 @@ public class ArrowManager : MonoBehaviour {
         if (currentArrow == null) {
             currentArrow = Instantiate(arrowPrefab);
             currentArrow.transform.parent = trackedObj.transform;
-            currentArrow.transform.localPosition = new Vector3(0f, 0f, .342f);
+            currentArrow.transform.localPosition = new Vector3(0f, 0f, .354f);
             currentArrow.transform.localRotation = Quaternion.identity;
         }
     }

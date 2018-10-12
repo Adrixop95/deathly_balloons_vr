@@ -6,6 +6,8 @@ Twoim głównym celem jest pozbycie się wszystkich balonów pojawiających się
 
 Najnowsze dostępne wersje binarne dostępne do pobrania będą w zakładce [Release](https://github.com/Adrixop95/deathly_balloons_vr/releases).
 
+Głównym folderem z kodem gry jest folder /src/smiertelne_balony_unity. Inne projekty unity znajdujące się w folderze /src/ są projektami testowymi.
+
 ## Fabuła gry
 Tak jak w każdej dobrej opowieści, wszystko musiało rozpocząć się w czterocyfrowym roku oraz ogromnej naukowej wyprawy...
 
@@ -13,7 +15,7 @@ Tak jak w każdej dobrej opowieści, wszystko musiało rozpocząć się w cztero
 - Przeciwnicy oraz ich mechaniki
 - Assety, tekstury, grafika (broń, przeciwnicy, ???)
 - Mapa
-- Poprawione sterowanie (wykrywanie oraz mapowanie kontrolerów SteamVR)
+- Poprawione sterowanie (brak możliwości pełnych testów bez poprawych kontrolerów ruchowych, chyba powinno działać w teorii)
 - Fabuła (rozwinięcie konceptu śmiercionośnych balonów)
 - Intro (głos, menu, początkowa scena, ???)
 - Reszta rzeczy, jakie wpadną do głowy podczas tworzenia gry
