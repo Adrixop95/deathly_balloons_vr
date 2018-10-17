@@ -12,7 +12,7 @@ Głównym folderem z kodem gry jest folder /src/smiertelne_balony_unity. Inne pr
 Tak jak w każdej dobrej opowieści, wszystko musiało rozpocząć się w czterocyfrowym roku oraz ogromnej naukowej wyprawy...
 
 ## To-Do
-- Przeciwnicy oraz ich mechaniki
+- Przeciwnicy oraz ich mechaniki (Istnieje prefab balona z AI celującym w gracza)
 - Assety, tekstury, grafika (broń, przeciwnicy, ???)
 - Mapa
 - Poprawione sterowanie (brak możliwości pełnych testów bez poprawych kontrolerów ruchowych, chyba powinno działać w teorii)
