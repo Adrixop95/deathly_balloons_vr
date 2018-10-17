@@ -34,6 +34,7 @@ Driver4VR (Sterownik Microsoft Kinect do SteamVR) ► [Pobierz mnie](http://www.
 
 ## Previews
 <img src="/graphics/gifs/prev1.gif?raw=true">
+<img src="/graphics/gifs/prev2.gif?raw=true">
 
 
 ## Źródła oraz uznania twórczości
