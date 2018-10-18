@@ -17,6 +17,7 @@ public class MoveCharacter : MonoBehaviour {
 	
 	/// <summary> Funkcja Update </summary>
 	void Update () {
+        if ( GamePause.IsPause() ) { return; }
         rotateCamera();
         moveCamera();
 	}
@@ -61,16 +62,5 @@ public class MoveCharacter : MonoBehaviour {
 		bool	positioningZ	=	( subjectZ < targetZ + accuracy && subjectZ > targetZ - accuracy ) ? true : false;
 		return	( positioningX && positioningZ );
 	}
-
-    public bool objectPrecisionRotating( Vector3 subject, Vector3 target, float accuracy ) {
-		float	subjectX		=	subject.x;
-		float	subjectZ		=	subject.z;
-		float	targetX			=	target.x;
-		float	targetZ			=	target.z;
-
-		bool	positioningX	=	( subjectX < targetX + accuracy && subjectX > targetX - accuracy ) ? true : false;
-		bool	positioningZ	=	( subjectZ < targetZ + accuracy && subjectZ > targetZ - accuracy ) ? true : false;
-		return	( positioningX && positioningZ );
-    }
 
 }

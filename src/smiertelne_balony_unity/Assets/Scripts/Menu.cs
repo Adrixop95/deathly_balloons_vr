@@ -4,54 +4,45 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour {
 
-    public  float       time_look   =   2.5f;
-    private float       timer       =   0f;
-    private GameObject  last_look   =   null;
-    private Ray         camera_look;
+    public CameraRaycast raycast;
+    public bool start_pause = true;
+    private GameObject mainmenu;
+    private GameObject menubutton;
+    private GameObject pausemenu;
 
-    public  GameObject  main_menu;
-
-	/// <summary> Funkcja Inicjalizacji </summary>
+	// Use this for initialization
 	void Start () {
+        menubutton = transform.GetChild(0).gameObject;
+		mainmenu = transform.GetChild(1).gameObject;
+        pausemenu = transform.GetChild(2).gameObject;
 
+        if ( start_pause ) { GamePause.Pause(); }
 	}
 	
-	/// <summary> Funkcja Update </summary>
+	// Update is called once per frame
 	void Update () {
-        var screen_center = new Vector3( Screen.width/2.0f, Screen.height/2.0f, 0 );
-		camera_look = Camera.main.ScreenPointToRay( screen_center );
-        LookAt( camera_look );
-        if ( last_look != null ) { MenuDecision( last_look, timer ); }
-	}
+		if ( raycast.GetSelectedActive() ) {
+            GameObject raycastObject = raycast.GetSelectedObject();
+            if ( raycastObject == null ) { return; }
+            if ( raycastObject.name == "MainMenu Button" ) {
+                GamePause.Pause();
+                menubutton.SetActive( false );
+                pausemenu.SetActive( true );
 
-    /// <summary> Funkcja sprawdzająca na jaki obiekt spogląda kamera </summary>
-    /// <param name="look"> Środkowy punkt kamery </param>
-    private void LookAt( Ray look ) {
-        RaycastHit result;
+            } else if ( raycastObject.name == "Start Button" ) {
+                GamePause.Resume();
+                menubutton.SetActive( true );
+                mainmenu.SetActive( false );
 
-        if ( Physics.Raycast(look, out result, 2.0f) ) {
-            var object_look = result.transform.gameObject;
-            if (last_look != object_look) {
-                timer = 0f;
-                last_look = object_look;
+            } else if ( raycastObject.name == "Resume Button" ) {
+                GamePause.Resume();
+                menubutton.SetActive( true );
+                pausemenu.SetActive( false );
+
+            } else if ( raycastObject.name == "Exit Button" ) {
+                Application.Quit();
+
             }
-            timer += Time.deltaTime;
-        } else {
-            timer = 0f;
-            last_look = null;
         }
-    }
-
-    /// <summary> Funkcja decyzyjna menu </summary>
-    /// <param name="object_look"> Obiekt menu który jest wybierany </param>
-    /// <param name="time"> Aktualny czas spoglądania </param>
-    private void MenuDecision( GameObject object_look, float time ) {
-        if (time < time_look) { return; }
-        if ( object_look.name == "MainMenu Button" ) {
-            main_menu.SetActive( !main_menu.activeSelf );
-            timer = 0f;
-            last_look = null;
-        }
-    }
-
+	}
 }

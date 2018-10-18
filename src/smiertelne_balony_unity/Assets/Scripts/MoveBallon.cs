@@ -15,6 +15,7 @@ public class MoveBallon : MonoBehaviour {
 
     /// <summary> Funkcja Update </summary>
     void Update() {
+        if ( GamePause.IsPause() ) { return; }
         moveBallon();
     }
 
