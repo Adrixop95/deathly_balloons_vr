@@ -13,14 +13,15 @@ Głównym folderem z kodem gry jest folder /src/smiertelne_balony_unity. Inne pr
 Tak jak w każdej dobrej opowieści, wszystko musiało rozpocząć się w czterocyfrowym roku oraz ogromnej naukowej wyprawy...
 
 ## To-Do
-- Automatyczne generowanie przeciwników w obrębie widoku kamery
+- Automatyczne generowanie przeciwników
 - Znikanie przeciwników po ominięciu gracza
 - Fabuła (rozwinięcie konceptu śmiercionośnych balonów)
 - Intro (głos, menu, początkowa scena, ???)
 - Tekstury
 - Dodatkowe poziomy gry
 - Reszta rzeczy, jakie wpadną do głowy podczas tworzenia gry
-- Może easter egg (???)
+- Może easter egg (???)  
+- Poprawa wrogów (balony nie mogą się przenikać)
 
 ## Potrzebne narzędzia
 Silnik Unity 2018.2.11f1 lub nowszy ► [Pobierz mnie](https://unity3d.com/get-unity/download)  

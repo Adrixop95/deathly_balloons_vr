@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\GamePause.cs" />
     <Compile Include="Assets\Scripts\MakeBigger.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\MotherBallon.cs" />
     <Compile Include="Assets\Scripts\MoveBallon.cs" />
     <Compile Include="Assets\Scripts\MoveCharacter.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
