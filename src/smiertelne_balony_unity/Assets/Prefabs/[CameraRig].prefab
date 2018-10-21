@@ -1414,10 +1414,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da978329d45f5246a2eb2c3ccc4fbe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: {fileID: 0}
+  pathObject: {fileID: 0}
   speed: 2.5
-  rotation: 5
-  current_position: 0
+  rotation: 1.5
+  spacing: 1
+  resolution: 2
   infinite_loop: 1
 --- !u!212 &212157462694081700
 SpriteRenderer:

@@ -63,6 +63,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Paths2D\Editor\PathEditor2D.cs" />
     <Compile Include="Assets\Scripts\Paths2D\Editor\RoadEditor2D.cs" />
+    <Compile Include="Assets\Scripts\Paths3D\Editor\PathEditor3D.cs" />
+    <Compile Include="Assets\Scripts\Paths3D\Editor\RoadEditor3D.cs" />
     <Compile Include="Assets\SteamVR\Editor\SteamVR_Editor.cs" />
     <Compile Include="Assets\SteamVR\Editor\SteamVR_Preferences.cs" />
     <Compile Include="Assets\SteamVR\Editor\SteamVR_RenderModelEditor.cs" />

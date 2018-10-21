@@ -75,6 +75,12 @@
     <Compile Include="Assets\Scripts\Paths2D\Path2D.cs" />
     <Compile Include="Assets\Scripts\Paths2D\PathCreator2D.cs" />
     <Compile Include="Assets\Scripts\Paths2D\RoadCreator2D.cs" />
+    <Compile Include="Assets\Scripts\Paths3D\Bezier3D.cs" />
+    <Compile Include="Assets\Scripts\Paths3D\Examples\PathPlacer3D.cs" />
+    <Compile Include="Assets\Scripts\Paths3D\Path3D.cs" />
+    <Compile Include="Assets\Scripts\Paths3D\PathCreator3D.cs" />
+    <Compile Include="Assets\Scripts\Paths3D\RoadCreator3D.cs" />
+    <Compile Include="Assets\Scripts\Paths3D\VectorConverter.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_TestThrow.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_TestTrackedCamera.cs" />

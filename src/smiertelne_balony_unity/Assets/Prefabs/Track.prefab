@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1302522707380320}
+  m_IsPrefabAsset: 1
+--- !u!1 &1302522707380320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4795480512836210}
+  - component: {fileID: 114560449704155600}
+  - component: {fileID: 23317758163896344}
+  - component: {fileID: 33889015009058490}
+  - component: {fileID: 114994289498289526}
+  - component: {fileID: 114605742662166642}
+  m_Layer: 0
+  m_Name: Track
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4795480512836210
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1302522707380320}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!23 &23317758163896344
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1302522707380320}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: f76be681a0cd2a149921b8e1e197392d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &33889015009058490
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1302522707380320}
+  m_Mesh: {fileID: 0}
+--- !u!114 &114560449704155600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1302522707380320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e953c315337a4f940a5b173cb94b7bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plynnosc: 0.05
+  rozmiarDrogi: 2
+  automatycznaAktualizacja: 1
+  kafelkowanie: 3
+--- !u!114 &114605742662166642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1302522707380320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7853278d38b4944b25030e3789378c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spacing: 0.5
+  resolution: 1
+  size: 0.25
+--- !u!114 &114994289498289526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1302522707380320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f33c46da69debd349918aef5f33f996f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path:
+    points:
+    - {x: -0.07484436, y: 0, z: -0.012175083}
+    - {x: -3.4225605, y: 0, z: 7.3849993}
+    - {x: 4.5819874, y: 0, z: 2.3494205}
+    - {x: 3.5207217, y: 0, z: 10.034977}
+    - {x: 2.459456, y: 0, z: 17.720533}
+    - {x: 17.036661, y: 0, z: 15.067902}
+    - {x: 17.753134, y: 0, z: 5.5442877}
+    - {x: 18.47911, y: 0, z: -4.105671}
+    - {x: 15.48849, y: 0, z: -5.2747946}
+    - {x: 9.489771, y: 0, z: -6.154789}
+    - {x: 6.6585293, y: 0, z: -6.5701237}
+    - {x: 2.81836, y: 0, z: -6.4050546}
+    isClosed: 1
+    autoSetControlPoints: 0
+  lock_yAxis: 1
+  kolorPunktu: {r: 1, g: 0, b: 0, a: 1}
+  kolorPunktuKontrolnego: {r: 1, g: 1, b: 1, a: 1}
+  kolorSegmentu: {r: 0, g: 1, b: 0, a: 1}
+  kolorWybranegoSegmentu: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  rozmiarPunktu: 0.1
+  rozmiarPunktuKontrolnego: 0.1
+  punktyKontrolne: 1
