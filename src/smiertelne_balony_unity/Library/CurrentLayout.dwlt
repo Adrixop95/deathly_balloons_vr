@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 47
+  controlID: 68
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 48
+  controlID: 69
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 49
+  controlID: 70
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -281,9 +281,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 293
+    x: 286
     y: 105
-    width: 661
+    width: 668
     height: 390
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &13
@@ -323,34 +323,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Kamil\Desktop\Projekt VR\deathly_balloons_vr\src\smiertelne_balony_unity
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 22}
-    m_SelectedIDs: 82350000
-    m_LastClickedID: 13698
-    m_ExpandedIDs: 000000006c340000fa34000082350000243600003a3600009c37000054380000603b00006e3b0000063c0000503c0000de3d0000e03d0000e23d0000223e000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 022c0000
+    m_LastClickedID: 11266
+    m_ExpandedIDs: 00000000022c0000a6370000a8370000aa37000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Scripts
-      m_OriginalName: Scripts
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 13698
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -364,7 +364,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006c340000fa34000082350000243600003a3600009c37000054380000083b0000603b00006e3b0000063c0000503c0000de3d0000e03d0000e23d0000
+    m_ExpandedIDs: 00000000022c00009c2c0000322d0000fc2d0000122e0000ba2f00008c300000d6320000f433000006340000b834000004350000a6370000a8370000aa370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -391,8 +391,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c62300006e2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -480,28 +480,28 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: aef8ffff
-    m_LastClickedID: -1874
-    m_ExpandedIDs: b0f8ffff00000000
+    m_SelectedIDs: 2005e6ff
+    m_LastClickedID: -1702624
+    m_ExpandedIDs: 2405e6ff9291e8ffb291e8ff44c4e9ff0a41efff2844efff3046efffb24aefff2c4defff144feffff250efffbecff0ffe0fbffff00000000d8970000e2970000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Interior UI
+      m_OriginalName: Interior UI
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -1702630
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - SampleScene
+  - Level_01
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -532,14 +532,14 @@ MonoBehaviour:
     height: 390
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 0
+  lastFramingTime: 9644.673738407046
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.6456945, y: 1.4431615, z: -2.3554726}
+    m_Target: {x: 1.6637198, y: -1.5443692, z: 6.134715}
     speed: 2
-    m_Value: {x: 3.6456945, y: 1.4431615, z: -2.3554726}
+    m_Value: {x: 1.6637198, y: -1.5443692, z: 6.134715}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -567,19 +567,19 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.21261925, y: -0.27919206, z: 0.06354033, w: -0.9342417}
+    m_Target: {x: -0.18551774, y: -0.16363984, z: 0.031348765, w: -0.96841234}
     speed: 2
-    m_Value: {x: -0.21261925, y: -0.27919206, z: 0.06354033, w: -0.9342417}
+    m_Value: {x: -0.18551774, y: -0.16363984, z: 0.031348765, w: -0.96841234}
   m_Size:
-    m_Target: 9.025809
+    m_Target: 7.4040174
     speed: 2
-    m_Value: 9.025809
+    m_Value: 7.4040174
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: -0.051284865, y: -0.011388472, z: 0.0005846402, w: -0.99861896}
+  m_LastSceneViewRotation: {x: -0.081182085, y: -0.0098632015, z: 0.0008038816, w: -0.99665016}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -686,6 +686,6 @@ MonoBehaviour:
     serializedVersion: 2
     x: 70
     y: 516
-    width: 923
+    width: 884
     height: 251
   m_PersistentViewDataDictionary: {fileID: 0}

@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class CameraRaycast : MonoBehaviour {
 
-    public  float       raycast_delay = 5f;
+    public  float       raycast_max_delay = 60f;
+    public  float       raycast_distance = 5f;
     public  LayerMask[] ignore_layer;
     private GameObject  last_object;
     private float       raycast_timer;
@@ -25,14 +26,14 @@ public class CameraRaycast : MonoBehaviour {
         Ray ray = new Ray( transform.position, transform.forward );
         RaycastHit hit;
 
-        if ( Physics.Raycast( ray, out hit, 5.0f ) ) {
+        if ( Physics.Raycast( ray, out hit, raycast_distance ) ) {
             GameObject hitObject = hit.collider.gameObject;
             if ( hitObject != last_object ) {
                 raycast_timer = 0f;
                 last_object = hitObject;
             }
             raycast_timer += Time.deltaTime;
-            if ( raycast_timer > raycast_delay ) { raycast_timer = raycast_delay; }
+            if ( raycast_timer > raycast_max_delay ) { raycast_timer = raycast_max_delay; }
         } else {
             raycast_timer = 0f;
             last_object = null;
@@ -40,5 +41,5 @@ public class CameraRaycast : MonoBehaviour {
     }
 
     public GameObject GetSelectedObject() { return last_object; }
-    public bool GetSelectedActive() { return raycast_timer >= raycast_delay; }
+    public float GetSelectedActive() { return raycast_timer; }
 }

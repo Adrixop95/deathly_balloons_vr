@@ -6,7 +6,6 @@ public class MotherBallon : MonoBehaviour {
 
     // Pobranie klonowanego prefabu oraz celu balonów
     public GameObject prefabSpawn;
-    public Transform target;
 
     bool isCreated = false;
 
@@ -25,8 +24,10 @@ public class MotherBallon : MonoBehaviour {
             // Tworzenie 2 balonów 
             for (int i = 0; i < 2; i++) {
                 // Tworzenie klona z parametrem dziedziczonym z MoveBallon.cs
-                GameObject go = (GameObject)Instantiate(prefabSpawn);
-                go.GetComponent<MoveBallon>().target = target;
+                GameObject go = (GameObject) Instantiate( prefabSpawn );
+                go.transform.position = transform.position;
+                go.transform.parent = transform.parent;
+                go.GetComponent<MoveBallon>().target = GetComponent<MoveBallon>().target;
             }
                         
             isCreated = true;
