@@ -42,6 +42,9 @@ Alfa 0.1 (Pierwotna mechanika gry, strzelanie z łuku do balonów)
 Alfa 0.2 (Zmiana założenia mechanik, AI balonów)  
 <img src="/graphics/gifs/prev2.gif?raw=true">  
 
+Alfa 0.3 (System poruszania się po ścieżce i tworzenie ścieżek)  
+<img src="/graphics/gifs/prev3.gif?raw=true">  
+
 
 ## Źródła oraz uznania twórczości
 [Unity VR Tutorial: How to Build a Robin Hood VR Game From Scratch](https://www.youtube.com/watch?v=Dh7Wwqs-s2c)  
