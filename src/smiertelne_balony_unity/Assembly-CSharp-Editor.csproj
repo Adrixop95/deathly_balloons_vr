@@ -285,9 +285,6 @@
     <Reference Include="Unity.Locator">
       <HintPath>D:/Program Files/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-UnityScript">
-      <HintPath>C:/Users/adria/Github/deathly_balloons_vr/src/smiertelne_balony_unity/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
