@@ -10,9 +10,15 @@ ModelImporter:
     2100004: Material
     2100006: Material.003
     2100008: Material.002
+    2100010: Material.022
+    2100012: Material.021
+    2100014: Material.018
+    2100016: Material.019
+    2100018: Material.020
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.004
+    4300002: Floor
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -85,6 +91,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
