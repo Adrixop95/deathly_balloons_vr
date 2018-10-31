@@ -14,14 +14,12 @@ Tak jak w każdej dobrej opowieści, wszystko musiało rozpocząć się w cztero
 
 ## To-Do
 - Automatyczne generowanie przeciwników
-- Znikanie przeciwników po ominięciu gracza
 - Fabuła (rozwinięcie konceptu śmiercionośnych balonów)
 - Intro (głos, menu, początkowa scena, ???)
 - Tekstury
 - Dodatkowe poziomy gry
 - Reszta rzeczy, jakie wpadną do głowy podczas tworzenia gry
 - Może easter egg (???)  
-- Poprawa wrogów (balony nie mogą się przenikać)
 
 ## Potrzebne narzędzia
 Silnik Unity 2018.2.11f1 lub nowszy ► [Pobierz mnie](https://unity3d.com/get-unity/download)  
@@ -45,6 +43,8 @@ Alfa 0.2 (Zmiana założenia mechanik, AI balonów)
 Alfa 0.3 (System poruszania się po ścieżce i tworzenie ścieżek)  
 <img src="/graphics/gifs/prev3.gif?raw=true">  
 
+Alfa 0.4 (Strzelanie z broni laserowej)  
+<img src="/graphics/gifs/prev4.gif?raw=true">  
 
 ## Źródła oraz uznania twórczości
 [Unity VR Tutorial: How to Build a Robin Hood VR Game From Scratch](https://www.youtube.com/watch?v=Dh7Wwqs-s2c)  
