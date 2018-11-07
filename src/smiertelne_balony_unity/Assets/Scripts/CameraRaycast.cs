@@ -6,15 +6,10 @@ using UnityEngine;
 public class CameraRaycast : MonoBehaviour {
 
     public  float       raycast_max_delay = 60f;
-    public  float       raycast_distance = 5f;
+    public  float       raycast_distance = 10f;
     public  LayerMask[] ignore_layer;
     private GameObject  last_object;
     private float       raycast_timer;
-
-	/// <summary> Funkcja Inicjalizacji </summary>
-	void Start () {
-		
-	}
 	
 	/// <summary> Funkcja Update </summary>
 	void Update () {

@@ -4,28 +4,31 @@ using UnityEngine;
 
 public class MakeBigger : MonoBehaviour {
 
-    // nasz cel
-    public Transform target;
+    public Transform target;    // Gracz
+    public float distance = 5f;
+    public Vector3 default_size = new Vector3( 1f, 1f, 1f );
+    public Vector3 size_speed = new Vector3( 1f, 1f, 1f );
 
-    void Start () {
-    }
-
+    /// <summary> Funkcja Update </summary>
     void Update () {
-        changeSizeBasedOnCamera();
+        ChangeSizeBasedOnCamera();
     }
 
-    void changeSizeBasedOnCamera() {
-         
-        // odległość pomiędzy celem a balonem
+    /// <summary> Funkcja powiększająca lub pomniejszająca obiekt na bazie odległości </summary>
+    void ChangeSizeBasedOnCamera() {
+        // Odległość pomiędzy celem a balonem
         float dist = Vector3.Distance(target.position, transform.position);
 
-        // jeśli odległość większa niż 5f zmień rozmiar balona na początkowy (1f)
-        // jeśli odległość jest mniejsza lub równa 3f zwiększaj rozmiar balona o 0.01
-        // wymagany balans
-        if (dist > 5f){
-            transform.localScale = new Vector3(1f, 1f, 1f);
-        } else if (dist <= 4.3f){
-            transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
+        // Jeśli odległość większa niż "distance" zmień rozmiar balona na początkowy "default_size"
+        if ( dist > distance ){
+            if ( transform.localScale.x < default_size.x || transform.localScale.y <  default_size.y || transform.localScale.z <  default_size.z ) {
+                transform.localScale = default_size;
+                return;
+            }
+            transform.localScale -= (size_speed * Time.deltaTime);
+        // Jeśli odległość jest mniejsza lub równa dystansowi
+        } else if ( dist <= distance ){
+            transform.localScale += (size_speed * Time.deltaTime);
         }
     }
 }

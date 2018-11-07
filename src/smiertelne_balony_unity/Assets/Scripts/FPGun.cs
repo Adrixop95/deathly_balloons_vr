@@ -2,70 +2,121 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class Attack {
+    public string name;
+    public float lookTime;
+    public float attackTime;
+    public Attack(string name, float lT, float aT) {
+        this.name = name;
+        lookTime = lT;
+        attackTime = aT;
+    }
+}
+
 public class FPGun : MonoBehaviour {
 
     // https://www.youtube.com/watch?v=Ka_cOVSTx6c
 
-    public float timeBetweenBullets = 0.15f;
-    public float range = 10f;
+    private float timeBetweenBullets = 0.5f;
+    private float effectsDisplayTime = 0.5f;
+    private float range = 10f;
+    private Vector3 destiny;
 
-    float timer;
+    public Attack[] attackData = new Attack[] {
+        new Attack("Balloon", 0.5f, 1f),
+        new Attack("MotherBalloon", 0.5f, 1f),
+        new Attack("BigBaloon", 0.5f, 1.5f)
+    };
 
-    LineRenderer gunLine;
-    float effectsDisplayTime = 0.2f;
+    private float timer;
+    private bool isShooting = false;
 
-    bool isShooting = false;
+    private Camera Camera;
+    private LineRenderer gunLine;
+    private Player player_data;
+    private Transform gunEnd;
 
-    Camera Camera;
-
-    Transform gunEnd;
-
-    private void Awake() {
+    /// <summary> Funkcja Inicjalizacji </summary>
+    void Start () {
+        Camera = GetComponent<Camera>();
         gunEnd = GameObject.FindWithTag("GunEnd").transform;
         gunLine = gunEnd.GetComponent<LineRenderer>();
-        Camera = GetComponent<Camera>();
-    }
-
-    // Use this for initialization
-    void Start () {
-		
+        range = GetComponent<CameraRaycast>().raycast_distance;
+        player_data = transform.parent.GetComponent<Player>();
 	}
-	
-	// Update is called once per frame
+
+    /// <summary> Funkcja Update </summary>
 	void Update () {
+        GameObject target = ObjectDetector();
+        float time = TargetingTime();
+
+        bool isObject = false;
+        // Sprawdź czy objekt znajduje się na liście obiektów do ataku
+        if ( target != null ) {
+            foreach ( Attack a in attackData ) {
+                if ( target.name == a.name && time >= a.lookTime ) {
+                    // Jeżeli patrzy się na niego odpowiednio długo lookTime,
+                    // następuje przystępienie do ataku
+                    destiny = target.transform.position;
+                    isObject = true;
+                    // Jeżeli minie czas który wymagany jest aby obiekt został pokonany,
+                    // objet zostaje usunięty z pola bitwy
+                    if ( time >= a.lookTime + a.attackTime ) {
+                        player_data.AddPoints( target.GetComponent<BalloonBehaviour>().give_points );
+                        GameObject.Destroy( target );
+                        isObject = false;
+                    }
+                    break;
+                }
+            }
+        }
+
+        isShooting = isObject;
+
         timer += Time.deltaTime;
-
-        if (isShooting == true  && timer >= effectsDisplayTime) {
-            Shoot();
-        }
-
-        if (timer >= timeBetweenBullets * effectsDisplayTime) {
-            DisableEffects();
-        }
-
-        if (Input.GetButtonDown("Fire1")) {
-            isShooting = true;
+        if ( isObject && isShooting ) {
+            if ( timer < effectsDisplayTime ) { Shoot(); } else { DisableEffects(); }
+            if ( timer >= effectsDisplayTime + timeBetweenBullets ) { timer = 0f; }
         } else {
+            EndShoot();
             isShooting = false;
-        }		
+        }
 	}
 
-    public void DisableEffects() {
+    /// <summary> Tymczasowe wyłączenie lasera </summary>
+    private void DisableEffects() {
+        gunLine.positionCount = 0;
         gunLine.enabled = false;
     }
 
-    void Shoot() {
-        gunEnd = GameObject.FindWithTag("GunEnd").transform;
-        gunLine = gunEnd.GetComponent<LineRenderer>();
+    /// <summary> Pobiera obiekt na który spogląda kamera </summary>
+    /// <returns> Obiekt </returns>
+    private GameObject ObjectDetector() {
+        return GetComponent<CameraRaycast>().GetSelectedObject();
+    }
 
+    /// <summary> Pobranie informacji o czasie spoglądania na obiekt </summary>
+    /// <returns> Czas w s </returns>
+    private float TargetingTime() {
+        return GetComponent<CameraRaycast>().GetSelectedActive();
+    }
+
+    /// <summary> Rozpoczęcie ataku, atak ciągły (rysowanie lasera na mapie) </summary>
+    private void Shoot() {
         timer = 0f;
-
         gunLine.enabled = true;
 
-        Vector3 rayOrigin = Camera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.5f));
-        RaycastHit hit;
-
+        gunLine.positionCount = 2;
         gunLine.SetPosition(0, gunEnd.position);
-        gunLine.SetPosition(1, gunEnd.position + (Camera.transform.forward * range));
+        gunLine.SetPosition(1, destiny);
     }
+
+    /// <summary> Zakończenie ataku (usunięcie lasera z mapy) </summary>
+    private void EndShoot() {
+        timer = 0f;
+        gunLine.positionCount = 0;
+        gunLine.enabled = false;
+    }
+
 }

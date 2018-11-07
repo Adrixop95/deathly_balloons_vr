@@ -3,36 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MotherBallon : MonoBehaviour {
-
-    // Pobranie klonowanego prefabu oraz celu balonów
-    public GameObject prefabSpawn;
-
+ 
+    public GameObject prefabSpawn;  // Klonowany prefab oraz cel balonów
+    public int amountSpawn = 3;
     bool isCreated = false;
-
-    void Start () {
-		
-	}
 	
+    /// <summary> Akcja wykonywana podczas niszczenia GameObjectu </summary>
+    void OnDestroy() {
+        SpawnBallonPrefab( amountSpawn );
+    }
+
+    /// <summary> Funkcja Update </summary>
 	void Update () {
-        spawnBallonPrefab();
-		
+        //SpawnBallonPrefab();
 	}
 
-    void spawnBallonPrefab() {
-        // Sprawdzenie czy został stworzony
+    /// <summary> Tworzenie obiektów balonów wokół balonu </summary>
+    /// <param name="count"> Ilość tworzonych obiektó </param>
+    void SpawnBallonPrefab( int count ) {
+
+        Vector3 center = transform.position;
+        float r_size = count > 4 ? count-2 : 1;
+        float r = GetComponent<CapsuleCollider>().radius * 2 + (prefabSpawn.GetComponent<CapsuleCollider>().radius * r_size);
+        float anglePos = ( 360f / count ) * Mathf.PI / 180f;
+
         if (!isCreated) {
-            // Tworzenie 2 balonów 
-            for (int i = 0; i < 3; i++) {
-                // Tworzenie klona z parametrem dziedziczonym z MoveBallon.cs
-                GameObject go = (GameObject) Instantiate( prefabSpawn );
-                //go.GetComponent<CapsuleCollider>().isTrigger = true;
+            for (int i = 0; i < count; i++) {
+                Vector3 position = new Vector3(
+                    center.x + r * Mathf.Cos( i * anglePos ),
+                    center.y,
+                    center.z + r * Mathf.Sin( i * anglePos )
+                );
+                GameObject go = (GameObject) Instantiate( prefabSpawn, transform.parent );
 
-                int minus = ((Random.Range(0, 1) > 0 ? -1 : 1));
-                Vector3 adder = new Vector3((1f + Random.Range(0f, 2f)) * minus, (1f + Random.Range(0f, 2f)) * minus, (1f + Random.Range(0f, 2f)) * minus);
-
-                go.transform.position = transform.position + adder;
-                go.transform.parent = transform.parent;
-                go.GetComponent<MoveBallon>().target = GetComponent<MoveBallon>().target;
+                go.name = "Balloon";
+                go.transform.position = position;
+                go.GetComponent<BalloonBehaviour>().target = GetComponent<BalloonBehaviour>().target;
             }
                         
             isCreated = true;
