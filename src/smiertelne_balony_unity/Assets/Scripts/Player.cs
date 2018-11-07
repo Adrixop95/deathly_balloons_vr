@@ -13,8 +13,15 @@ public class Player : MonoBehaviour {
     private Menu main_menu;
     private TextMesh final_text;
 
+    public TextMesh points_mesh;
+    public string points_text;
+    public TextMesh lives_mesh;
+    public string lives_text;
+
     public int lives = 3;
+    private int lives_detector;
     private int points = 0;
+    private int points_detector;
 
 	/// <summary> Funkcja Inicjalizacji </summary>
 	void Start () {
@@ -27,12 +34,23 @@ public class Player : MonoBehaviour {
 	void Update () {
 		CheckWin();
         CheckLoose();
+
+        if (lives != lives_detector ) {
+            lives_detector = lives;
+            lives_mesh.text = lives_text + lives.ToString();
+        }
+
+        if (points != points_detector) {
+            points_detector = points;
+            points_mesh.text = points_text + points.ToString();
+        }
 	}
 
     /// <summary> Funkcja sprawdzająca wygraną </summary>
     private void CheckWin() {
         if ( ballons_container.childCount <= 0 ) {
             GamePause.Pause();
+            main_menu.SetNext( "Następny poziom", true );
             main_menu.OpenFinal( true );
             main_menu.ShowPauseButton( false );
             final_text.text = win_text + points.ToString();
@@ -43,6 +61,7 @@ public class Player : MonoBehaviour {
     private void CheckLoose() {
         if ( lives <= 0 ) {
             GamePause.Pause();
+            main_menu.SetNext( "Powtórz poziom", false );
             main_menu.OpenFinal( true );
             main_menu.ShowPauseButton( false );
             final_text.text = loose_text + points.ToString();

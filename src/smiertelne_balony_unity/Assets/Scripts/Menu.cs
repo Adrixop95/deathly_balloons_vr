@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
 
@@ -11,6 +12,9 @@ public class Menu : MonoBehaviour {
     private GameObject pausebutton;
     private GameObject pausemenu;
     private GameObject finalmenu;
+
+    public string next_scene_name;
+    private bool next_mode;
 
 	/// <summary> Funkcja Inicjalizacji </summary>
 	void Start () {
@@ -40,6 +44,13 @@ public class Menu : MonoBehaviour {
                 GamePause.Resume();
                 OpenPause( false );
                 ShowPauseButton( true );
+            
+            } else if ( raycastObject.name == "Next Button" ) {
+                if (next_mode) {
+                    SceneManager.LoadScene(next_scene_name, LoadSceneMode.Single);
+                } else {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+                }
 
             } else if ( raycastObject.name == "Exit Button" ) {
                 Application.Quit();
@@ -76,4 +87,13 @@ public class Menu : MonoBehaviour {
     public TextMesh GetFinalText() {
         return finalmenu.transform.Find("EndMenu Title").GetComponent<TextMesh>();
     }
+
+    /// <summary> Ustawia przycisk menu końcowego </summary>
+    /// <param name="title"> Tytuł przycisku </param>
+    /// <param name="mode"> Akcja przejścia dalej </param>
+    public void SetNext( string title, bool mode ) {
+        finalmenu.transform.Find("Next Button Text").GetComponent<TextMesh>().text = title;
+        next_mode = mode;
+    }
+
 }

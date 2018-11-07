@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 23284018459865518}
   - component: {fileID: 102236747131311658}
   m_Layer: 5
-  m_Name: MainMenu Button Text
+  m_Name: Balloon Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
