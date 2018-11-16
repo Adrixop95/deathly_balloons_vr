@@ -116,6 +116,7 @@ MonoBehaviour:
   prefabSpawn: {fileID: 1620227488918514, guid: 09b73581abb46654a899a5bed1de7c48,
     type: 2}
   amountSpawn: 3
+  additionalDistance: 1
 --- !u!114 &114982413246291280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 0.5
+  speed: 1.5
   current_position: 0
   give_points: 5
   take_lives: 1

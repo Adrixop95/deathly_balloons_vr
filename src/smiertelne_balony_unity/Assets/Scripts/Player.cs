@@ -26,14 +26,13 @@ public class Player : MonoBehaviour {
 	/// <summary> Funkcja Inicjalizacji </summary>
 	void Start () {
 		main_menu = transform.Find("Interior UI").GetComponent<Menu>();
-        final_text = main_menu.GetFinalText();
+        final_text = main_menu.GetFinalText().GetComponent<TextMesh>();
         points = 0;
 	}
 	
 	/// <summary> Funkcja Update </summary>
 	void Update () {
-		CheckWin();
-        CheckLoose();
+        if ( GamePause.IsPause() ) { return; }
 
         if (lives != lives_detector ) {
             lives_detector = lives;
@@ -44,27 +43,32 @@ public class Player : MonoBehaviour {
             points_detector = points;
             points_mesh.text = points_text + points.ToString();
         }
+
+        CheckWin();
+        CheckLoose();
 	}
 
     /// <summary> Funkcja sprawdzająca wygraną </summary>
     private void CheckWin() {
         if ( ballons_container.childCount <= 0 ) {
-            GamePause.Pause();
-            main_menu.SetNext( "Następny poziom", true );
-            main_menu.OpenFinal( true );
-            main_menu.ShowPauseButton( false );
+            Debug.Log("Win Detected");
             final_text.text = win_text + points.ToString();
+            main_menu.ShowPauseButton( false );
+            main_menu.OpenFinal( true );
+            main_menu.SetNext( "Następny poziom", true );
+            GamePause.Pause();
         }
     }
 
     /// <summary> Funkcja sprawdzająca przegraną </summary>
     private void CheckLoose() {
         if ( lives <= 0 ) {
-            GamePause.Pause();
-            main_menu.SetNext( "Powtórz poziom", false );
-            main_menu.OpenFinal( true );
-            main_menu.ShowPauseButton( false );
+            Debug.Log("Loose Detected");
             final_text.text = loose_text + points.ToString();
+            main_menu.ShowPauseButton( false );
+            main_menu.OpenFinal( true );
+            main_menu.SetNext( "Powtórz poziom", false );
+            GamePause.Pause();
         }
     }
 

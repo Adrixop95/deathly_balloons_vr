@@ -21,7 +21,7 @@ public class MoveCharacter : MonoBehaviour {
 	
 	/// <summary> Funkcja Update </summary>
 	void Update () {
-        if ( GamePause.IsPause() ) { return; }
+        if ( GamePause.IsPause() ) { Stopper(); return; }
         rotateCamera();
         moveCamera();
 	}
@@ -49,6 +49,10 @@ public class MoveCharacter : MonoBehaviour {
         var direction = (target - player).normalized;
         var lookRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp( transform.rotation, lookRotation, rotation * Time.deltaTime );
+    }
+
+    private void Stopper() {
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 
     /// <summary> Sprawdzenie czy postać (obiekt) znajduje się w granicach punktu docelowego </summary>

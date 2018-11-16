@@ -6,6 +6,7 @@ public class MotherBallon : MonoBehaviour {
  
     public GameObject prefabSpawn;  // Klonowany prefab oraz cel balonów
     public int amountSpawn = 3;
+    public float additionalDistance = 1f;
     bool isCreated = false;
 	
     /// <summary> Akcja wykonywana podczas niszczenia GameObjectu </summary>
@@ -24,7 +25,7 @@ public class MotherBallon : MonoBehaviour {
 
         Vector3 center = transform.position;
         float r_size = count > 4 ? count-2 : 1;
-        float r = GetComponent<CapsuleCollider>().radius * 2 + (prefabSpawn.GetComponent<CapsuleCollider>().radius * r_size);
+        float r = GetComponent<CapsuleCollider>().radius * 2 + (prefabSpawn.GetComponent<CapsuleCollider>().radius * r_size) + additionalDistance;
         float anglePos = ( 360f / count ) * Mathf.PI / 180f;
 
         if (!isCreated) {

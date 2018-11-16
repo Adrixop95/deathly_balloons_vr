@@ -29,13 +29,24 @@ public class BalloonBehaviour : MonoBehaviour {
     /// <summary> Wykrycie kolizji z innym obiektem </summary>
     /// <param name="collision"> Collider innego obiektu </param>
     void OnCollisionEnter ( Collision collision ) {
-        Debug.Log( this.name + " :: " + collision.gameObject.name );
+        Debug.Log( "Collision detected by: " + this.name + " with: " + collision.gameObject.name );
         collision_list.Add( collision.gameObject );
 
-        foreach ( GameObject collisionObject in collision_list ) {
-            if( collisionObject.name == "CameraRig" ) {
-                collisionObject.GetComponent<Player>().RemoveLives( take_lives );
-                Destroy( this.gameObject );
+        if ( collision.gameObject.name == "CameraRig" ) {
+            collision.gameObject.GetComponent<Player>().RemoveLives( take_lives );
+            Destroy( this.gameObject );
+
+        } else {
+            foreach ( GameObject collisionObject in collision_list ) {
+                if ( collisionObject == null ) {
+                    collision_list.Remove( collisionObject );
+                    return;
+                }
+
+                if( collisionObject.name == "CameraRig" ) {
+                    collisionObject.GetComponent<Player>().RemoveLives( take_lives );
+                    Destroy( this.gameObject );
+                }
             }
         }
     }

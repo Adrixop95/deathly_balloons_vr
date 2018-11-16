@@ -24,6 +24,7 @@ public class Menu : MonoBehaviour {
         finalmenu = transform.GetChild(3).gameObject;
 
         if ( start_pause ) { GamePause.Pause(); }
+        else { GamePause.Resume(); }
 	}
 	
 	/// <summary> Funkcja Update (Wykrycie elementu menu i wykonanie akcji po określonym upływie czasu) </summary>
@@ -84,15 +85,16 @@ public class Menu : MonoBehaviour {
 
     /// <summary> Pobiera komponent tekstowy menu finałowego </summary>
     /// <returns> TextMesh menu finałowego </returns>
-    public TextMesh GetFinalText() {
-        return finalmenu.transform.Find("EndMenu Title").GetComponent<TextMesh>();
+    public GameObject GetFinalText() {
+        return transform.GetChild(3).Find("EndMenu Title").gameObject;
     }
 
     /// <summary> Ustawia przycisk menu końcowego </summary>
     /// <param name="title"> Tytuł przycisku </param>
     /// <param name="mode"> Akcja przejścia dalej </param>
     public void SetNext( string title, bool mode ) {
-        finalmenu.transform.Find("Next Button Text").GetComponent<TextMesh>().text = title;
+        GameObject  nb  =   GameObject.Find("Next Button Text");
+        nb.GetComponent<TextMesh>().text = title;
         next_mode = mode;
     }
 
