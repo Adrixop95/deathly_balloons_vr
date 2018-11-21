@@ -38,7 +38,7 @@ public class MainMenu : MonoBehaviour {
             GameObject raycastObject = raycaster.GetSelectedObject();
             if ( raycastObject == null ) { return; }
             if ( raycastObject.name == "Start Balloon" ) {
-                SceneManager.LoadScene( "Level_1", LoadSceneMode.Single );
+                SceneManager.LoadScene( "Level_01", LoadSceneMode.Single );
 
             } else if ( raycastObject.name == "Levels Balloon" ) {
                 // ... // ... // ... //
