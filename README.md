@@ -46,9 +46,5 @@ Alfa 0.3 (System poruszania się po ścieżce i tworzenie ścieżek)
 Alfa 0.4 (Strzelanie z broni laserowej)  
 <img src="/graphics/gifs/prev4.gif?raw=true">  
 
-## Źródła oraz uznania twórczości
-[Unity VR Tutorial: How to Build a Robin Hood VR Game From Scratch](https://www.youtube.com/watch?v=Dh7Wwqs-s2c)  
-[Dokumentacja Unity](https://docs.unity3d.com/Manual/index.html)
-
 Made with 😺 and 💝,  
 by Laura Dymarczyk, Agata Dziurka, Kamil Karpiński, Adrian Rupala
