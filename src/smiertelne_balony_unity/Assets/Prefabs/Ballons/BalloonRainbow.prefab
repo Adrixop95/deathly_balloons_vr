@@ -127,6 +127,8 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 1
   current_position: 0
+  give_points: 5
+  take_lives: 1
 --- !u!136 &136705305743522558
 CapsuleCollider:
   m_ObjectHideFlags: 1
