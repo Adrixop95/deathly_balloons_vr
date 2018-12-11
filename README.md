@@ -12,15 +12,6 @@ Głównym folderem z kodem gry jest folder /src/smiertelne_balony_unity. Inne pr
 ## Fabuła gry
 Tak jak w każdej dobrej opowieści, wszystko musiało rozpocząć się w czterocyfrowym roku oraz ogromnej naukowej wyprawy...
 
-## To-Do
-- Automatyczne generowanie przeciwników
-- Fabuła (rozwinięcie konceptu śmiercionośnych balonów)
-- Intro (głos, menu, początkowa scena, ???)
-- Tekstury
-- Dodatkowe poziomy gry
-- Reszta rzeczy, jakie wpadną do głowy podczas tworzenia gry
-- Może easter egg (???)  
-
 ## Potrzebne narzędzia
 Silnik Unity 2018.2.11f1 lub nowszy ► [Pobierz mnie](https://unity3d.com/get-unity/download)  
 Steam ► [Pobierz mnie](https://store.steampowered.com/)  
@@ -45,6 +36,9 @@ Alfa 0.3 (System poruszania się po ścieżce i tworzenie ścieżek)
 
 Alfa 0.4 (Strzelanie z broni laserowej)  
 <img src="/graphics/gifs/prev4.gif?raw=true">  
+
+## Uznania twórczości
+[Mapa Alto's adventure fan art by MChahin](https://sketchfab.com/models/d434886986bb47e6b28e68dded762238?fbclid=IwAR3OLecKIQSUCjzltE02LjLqW-owYumMhYkAmH-KgrL8qfWh30S8WLlIFG4)
 
 Made with 😺 and 💝,  
 by Laura Dymarczyk, Agata Dziurka, Kamil Karpiński, Adrian Rupala
