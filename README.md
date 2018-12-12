@@ -3,14 +3,16 @@ Czy aby na pewno w świecie gdzie balony można spotkać wszędzie, jesteśmy be
 
 ## Zadania oraz cel gry
 
-Twoim głównym zadaniem jest ominięcie wszystkich balonów pojawiających się na ekraniem, dotarcie do końca poziomu i oczywiście uratowanie całej ludzkości przed zabójczymi balonami.
+Twoim głównym zadaniem jest zniszczenie wszystkich balonów pojawiających się na ekranie, dotarcie do końca poziomu i oczywiście uratowanie całej ludzkości przed zabójczymi balonami.
 
 Najnowsze dostępne wersje binarne dostępne do pobrania będą w zakładce [Release](https://github.com/Adrixop95/deathly_balloons_vr/releases).
 
 Głównym folderem z kodem gry jest folder /src/smiertelne_balony_unity. Inne projekty unity znajdujące się w folderze /src/ są projektami testowymi.
 
 ## Fabuła gry
-Tak jak w każdej dobrej opowieści, wszystko musiało rozpocząć się w czterocyfrowym roku oraz ogromnej naukowej wyprawy...
+Gracz wciela się w żołnierza walczącego z przedstawicielami obcej cywilizacji, inteligentnymi balonami. Ma on na sobie kombinezon, który pomaga mu przetrwać atak wrogich istot.
+
+Skutkiem anomalii spowodowanej przez najazd wrogich balonów, niektóre kawałki ziemi zaczęły odrywać się w powietrze, tworząc podniebne platformy. Na te platformy został zesłany główny bohater z misją dostania się do króla balonów i unicestwienia go.
 
 ## Potrzebne narzędzia
 Silnik Unity 2018.2.11f1 lub nowszy ► [Pobierz mnie](https://unity3d.com/get-unity/download)  
@@ -25,20 +27,14 @@ Wymagana doinstalowane Steam oraz SteamVR ► [Pobierz mnie](https://steamcommun
 Sterowniki do Microsoft Kinect (Driver4VR) ► [Pobierz mnie](http://www.driver4vr.com/)  
 
 ## Previews
-Alfa 0.1 (Pierwotna mechanika gry, strzelanie z łuku do balonów)  
-<img src="/graphics/gifs/prev1.gif?raw=true">  
-
-Alfa 0.2 (Zmiana założenia mechanik, AI balonów)  
-<img src="/graphics/gifs/prev2.gif?raw=true">  
-
-Alfa 0.3 (System poruszania się po ścieżce i tworzenie ścieżek)  
-<img src="/graphics/gifs/prev3.gif?raw=true">  
-
-Alfa 0.4 (Strzelanie z broni laserowej)  
-<img src="/graphics/gifs/prev4.gif?raw=true">  
+Beta 1 (Pierwsza wersja z możliwością ukończenia gry, teksturami, przeciwnikami, stworzona jako pokaz na zaliczenie przedmiotu)  
+<img src="/graphics/gifs/beta1.gif?raw=true">  
 
 ## Uznania twórczości
 [Mapa Alto's adventure fan art by MChahin](https://sketchfab.com/models/d434886986bb47e6b28e68dded762238?fbclid=IwAR3OLecKIQSUCjzltE02LjLqW-owYumMhYkAmH-KgrL8qfWh30S8WLlIFG4)
+[Low Poly Mini Village Free](https://assetstore.unity.com/packages/3d/environments/low-poly-mini-village-free-131677)
+[Toony Skies](https://assetstore.unity.com/packages/2d/textures-materials/sky/toony-skies-11020)
+[Awesome Low Poly Fantasy Clouds](https://assetstore.unity.com/packages/3d/environments/awesome-low-poly-fantasy-clouds-97654)
 
 Made with 😺 and 💝,  
 by Laura Dymarczyk, Agata Dziurka, Kamil Karpiński, Adrian Rupala
