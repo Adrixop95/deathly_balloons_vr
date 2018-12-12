@@ -63,8 +63,12 @@ public class FPGun : MonoBehaviour {
                     // Jeżeli minie czas który wymagany jest aby obiekt został pokonany,
                     // objet zostaje usunięty z pola bitwy
                     if ( time >= a.lookTime + a.attackTime ) {
-                        player_data.AddPoints( target.GetComponent<BalloonBehaviour>().give_points );
-                        GameObject.Destroy( target );
+                        if ( target.GetComponent<BalloonBehaviour>() ) {
+                            player_data.AddPoints( target.GetComponent<BalloonBehaviour>().give_points );
+                            GameObject.Destroy( target );
+                        } else if ( target.GetComponent<BossBehaviour>() ) {
+                            target.GetComponent<BossBehaviour>().RemoveLives(1);
+                        }
                         isObject = false;
                     }
                     break;
