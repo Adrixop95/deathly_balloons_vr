@@ -27,14 +27,14 @@ Wymagana doinstalowane Steam oraz SteamVR ► [Pobierz mnie](https://steamcommun
 Sterowniki do Microsoft Kinect (Driver4VR) ► [Pobierz mnie](http://www.driver4vr.com/)  
 
 ## Previews
-Beta 1 (Pierwsza wersja z możliwością ukończenia gry, teksturami, przeciwnikami, stworzona jako pokaz na zaliczenie przedmiotu)  
+Beta 1  
 <img src="/graphics/gifs/beta1.gif?raw=true">  
 
 ## Uznania twórczości
-[Mapa Alto's adventure fan art by MChahin](https://sketchfab.com/models/d434886986bb47e6b28e68dded762238?fbclid=IwAR3OLecKIQSUCjzltE02LjLqW-owYumMhYkAmH-KgrL8qfWh30S8WLlIFG4)
-[Low Poly Mini Village Free](https://assetstore.unity.com/packages/3d/environments/low-poly-mini-village-free-131677)
-[Toony Skies](https://assetstore.unity.com/packages/2d/textures-materials/sky/toony-skies-11020)
-[Awesome Low Poly Fantasy Clouds](https://assetstore.unity.com/packages/3d/environments/awesome-low-poly-fantasy-clouds-97654)
+[Mapa Alto's adventure fan art by MChahin](https://sketchfab.com/models/d434886986bb47e6b28e68dded762238?fbclid=IwAR3OLecKIQSUCjzltE02LjLqW-owYumMhYkAmH-KgrL8qfWh30S8WLlIFG4)  
+[Low Poly Mini Village Free](https://assetstore.unity.com/packages/3d/environments/low-poly-mini-village-free-131677)  
+[Toony Skies](https://assetstore.unity.com/packages/2d/textures-materials/sky/toony-skies-11020)  
+[Awesome Low Poly Fantasy Clouds](https://assetstore.unity.com/packages/3d/environments/awesome-low-poly-fantasy-clouds-97654)  
 
 Made with 😺 and 💝,  
 by Laura Dymarczyk, Agata Dziurka, Kamil Karpiński, Adrian Rupala
