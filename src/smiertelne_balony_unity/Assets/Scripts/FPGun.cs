@@ -33,6 +33,7 @@ public class FPGun : MonoBehaviour {
     private bool isShooting = false;
 
     private Camera Camera;
+    private GameObject gun;
     private LineRenderer gunLine;
     private Player player_data;
     private Transform gunEnd;
@@ -40,6 +41,8 @@ public class FPGun : MonoBehaviour {
     /// <summary> Funkcja Inicjalizacji </summary>
     void Start () {
         Camera = GetComponent<Camera>();
+        gun = transform.Find( "pistol" ).gameObject;
+        Debug.Log( gun );
         gunEnd = GameObject.FindWithTag("GunEnd").transform;
         gunLine = gunEnd.GetComponent<LineRenderer>();
         range = GetComponent<CameraRaycast>().raycast_distance;
@@ -66,6 +69,7 @@ public class FPGun : MonoBehaviour {
                         if ( target.GetComponent<BalloonBehaviour>() ) {
                             player_data.AddPoints( target.GetComponent<BalloonBehaviour>().give_points );
                             GameObject.Destroy( target );
+                            gun.GetComponent<PlayEffect>().Play( 1 );
                         } else if ( target.GetComponent<BossBehaviour>() ) {
                             target.GetComponent<BossBehaviour>().RemoveLives(1);
                         }
@@ -110,6 +114,7 @@ public class FPGun : MonoBehaviour {
     private void Shoot() {
         timer = 0f;
         gunLine.enabled = true;
+        gun.GetComponent<PlayEffect>().Play( 0 );
 
         gunLine.positionCount = 2;
         gunLine.SetPosition(0, gunEnd.position);

@@ -64,6 +64,8 @@ public class Player : MonoBehaviour {
     private void CheckLoose() {
         if ( lives <= 0 ) {
             Debug.Log("Loose Detected");
+            GameObject.Find( "Map" ).GetComponent<PlayMusic>().Activate( false );
+            GetComponent<PlayEffect>().Play( 0 );
             final_text.text = loose_text + points.ToString();
             main_menu.ShowPauseButton( false );
             main_menu.OpenFinal( true );

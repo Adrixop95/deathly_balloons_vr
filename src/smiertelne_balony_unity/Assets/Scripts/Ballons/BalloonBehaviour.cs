@@ -55,6 +55,7 @@ public class BossBehaviour : MonoBehaviour {
 
         if ( collision.gameObject.name == "CameraRig" ) {
             collision.gameObject.GetComponent<Player>().RemoveLives( take_lives );
+            collision.gameObject.GetComponent<PlayEffect>().Play( 1 );
             Destroy( this.gameObject );
 
         } else {
@@ -66,6 +67,7 @@ public class BossBehaviour : MonoBehaviour {
 
                 if( collisionObject.name == "CameraRig" ) {
                     collisionObject.GetComponent<Player>().RemoveLives( take_lives );
+                    collisionObject.GetComponent<PlayEffect>().Play( 1 );
                     after_hit = true;
                     StopBallon();
                 }
